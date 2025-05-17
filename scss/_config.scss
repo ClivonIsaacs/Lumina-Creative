@@ -1,0 +1,17 @@
+$font-stack: "Schibsted Grotesk", sans-serif;
+$primary-color: #fcf5e9;
+$dark-color: #333;
+
+.bg-primary {
+  background-color: $primary-color;
+  color: $dark-color;
+}
+
+.bg-dark {
+  background-color: $dark-color;
+  color: #fff;
+}
+
+.bg-dark .bg-primary {
+  padding: 0 0.2rem;
+}

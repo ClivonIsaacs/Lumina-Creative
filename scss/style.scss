@@ -1,0 +1,218 @@
+@import "config";
+@import "utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  line-height: 1.6;
+  color: $dark-color;
+}
+
+// Base Styles
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+h1,
+h2 {
+  line-height: 1.4;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+// Header
+.header {
+  margin: 20px 0;
+
+  .logo {
+    width: 130px;
+  }
+
+  .flex {
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  .main-nav {
+    a {
+      margin: 0 5px;
+      padding: 0.4rem 1.1rem;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+
+    .current {
+      background-color: $primary-color;
+      font-weight: bold;
+    }
+  }
+}
+
+// Hero
+.hero {
+  height: 500px;
+  text-align: center;
+  margin-bottom: 3.8rem;
+
+  h2 {
+    font-size: 2.9rem;
+    font-weight: 400;
+  }
+}
+
+// Gallery
+.gallery {
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    width: calc(33.333% - 20px);
+    border-radius: 15px;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    img {
+      border-radius: 15px;
+    }
+  }
+}
+
+// Footer
+.footer {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-top: 1px solid #aaa;
+  text-align: center;
+
+  img {
+    width: 120px;
+    height: 35px;
+  }
+
+  .flex {
+    justify-content: space-between;
+  }
+
+  .social a {
+    margin: 0 0.4rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
+  }
+}
+
+// Services
+.services {
+  padding: 3rem 0 4rem;
+
+  &-flex {
+    display: flex;
+    gap: 2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+// Team
+.team {
+  padding: 3rem 0 4rem;
+
+  &-flex {
+    display: flex;
+    gap: 1.4rem;
+  }
+
+  &-item {
+    border-radius: 15px;
+
+    img {
+      border-radius: 15px;
+    }
+  }
+}
+
+// Conatact
+.contact {
+  padding: 3rem 0 4rem;
+
+  p {
+    text-align: center;
+  }
+
+  .form-control {
+    margin: 3rem 0;
+
+    input[type="text"],
+    input[type="email"] {
+      border: 0;
+      border-bottom: 1px solid #aaa;
+      width: 100%;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: pointer;
+      padding-bottom: 1rem;
+    }
+
+    #message {
+      height: 150px;
+      width: 100%;
+    }
+
+    input:focus,
+    #message:focus {
+      outline: none;
+    }
+  }
+}
+
+// MediaQueries
+@media (max-width: 768px) {
+  .header .flex,
+  .footer .flex,
+  .services-flex,
+  .team-flex {
+    flex-direction: column;
+  }
+
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+
+  .service-item,
+  .team-item {
+    margin-bottom: 1.5rem;
+  }
+}
